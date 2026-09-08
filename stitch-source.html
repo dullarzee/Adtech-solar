@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SolarPrecision - Clean Energy Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#001d32",
+                      "on-secondary-container": "#6a4b00",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#e6e8ea",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-primary-container": "#f3f7ff",
+                      "outline": "#707881",
+                      "surface-container": "#eceef0",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#0077b6",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#111d22",
+                      "on-background": "#191c1e",
+                      "tertiary-fixed": "#d8e4eb",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#d8dadc",
+                      "primary-fixed": "#cde5ff",
+                      "secondary-container": "#fcb812",
+                      "tertiary-container": "#677379",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f7f9fb",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-secondary-fixed-variant": "#5e4200",
+                      "primary-fixed-dim": "#94ccff",
+                      "primary": "#005d90",
+                      "secondary-fixed": "#ffdea7",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#004b74",
+                      "surface": "#f7f9fb",
+                      "on-surface-variant": "#404850",
+                      "on-tertiary-fixed-variant": "#3c494e",
+                      "outline-variant": "#bfc7d1",
+                      "on-error": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "inverse-primary": "#94ccff",
+                      "secondary-fixed-dim": "#ffbb1e",
+                      "surface-container-low": "#f2f4f6",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#271900",
+                      "surface-tint": "#006399",
+                      "secondary": "#7c5800",
+                      "background": "#f7f9fb",
+                      "inverse-surface": "#2d3133",
+                      "tertiary-fixed-dim": "#bcc8cf",
+                      "tertiary": "#4e5b60",
+                      "on-tertiary-container": "#edf9ff",
+                      "surface-variant": "#e0e3e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "margin-desktop": "40px",
+                      "section-padding": "80px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-sm": [
+                              "Montserrat"
+                      ],
+                      "display-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface/90 dark:bg-surface-container-lowest/90 backdrop-blur-md text-primary dark:text-primary-fixed-dim font-body-md text-body-md sticky top-0 w-full z-50 shadow-[0_20px_40px_rgba(0,119,182,0.08)] dark:shadow-none shadow-md">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed-dim tracking-tight">SolarPrecision</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary-container font-semibold pb-1 hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all active:scale-95 transition-transform duration-200 px-3 py-2" href="#">Solutions</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all active:scale-95 transition-transform duration-200 px-3 py-2" href="#process">How it Works</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all active:scale-95 transition-transform duration-200 px-3 py-2" href="#tech">Technology</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all active:scale-95 transition-transform duration-200 px-3 py-2" href="#testimonials">Testimonials</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors hover:bg-surface-container-low dark:hover:bg-surface-container-highest rounded-lg transition-all active:scale-95 transition-transform duration-200 px-3 py-2" href="#faq">FAQ</a>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-body-md text-body-md font-semibold hover:opacity-90 transition-opacity active:scale-95">Get a Quote</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[819px] flex items-center justify-center pt-section-padding pb-section-padding px-margin-desktop md:px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking, wide-angle architectural photograph of a modern, eco-friendly luxury home bathed in bright, crisp morning sunlight. Sleek, dark solar panels cover the expansive, flat roof, gleaming efficiently. The house features large glass windows and clean, minimalist lines, surrounded by manicured green landscaping and a vibrant, clear blue sky. The image exudes a sense of premium sustainability, cutting-edge technology, and airy openness, perfectly aligning with a modern corporate aesthetic and a clean energy brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxCawmC6T-YRoWK7moUdrdxUkMjarTHDHrBs4PF7b0kcBPTMbHaxjWRu1vZ0OUYeX3hqt3IHnJeSHP47t10YbDNg561gmuJy-MmKL7SUZaXUHZ0KgGiNIWLSY-QrBCCLYDHktfULyQ8lV7pvlJPjLtaOCgfHYviaul1COVcw-A6s9bFgQp2qvChzuM0r6JTTnzHz56P2XuTkHPnA2J9S_bzNZpavupgFTAFxHAnet5YnOOp_94uR0l3g')"></div>
+<div class="absolute inset-0 bg-surface/40 backdrop-blur-sm"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="flex flex-col gap-base md:gap-gutter">
+<span class="bg-tertiary/20 text-primary px-4 py-1 rounded-full font-label-caps text-label-caps inline-block w-max tracking-widest uppercase">The Future of Energy</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background max-w-2xl">
+                    Power your home with <span class="text-primary">precision</span> and <span class="text-secondary-container">purpose</span>.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Experience the ultimate transition to renewable energy. We deliver high-efficiency solar solutions engineered for long-term reliability and significant cost savings.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-6">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-2 hover:bg-secondary-fixed-dim transition-colors shadow-[0_20px_40px_rgba(0,119,182,0.15)]">
+                        Get Started <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+<a class="bg-surface text-primary border-2 border-primary-container px-8 py-4 rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors shadow-sm" href="#calculator">
+                        Calculate Savings
+                    </a>
+</div>
+</div>
+<div class="hidden lg:block relative h-full min-h-[500px]">
+<!-- Decorative element could go here, relying on bg image for now to maintain clean look -->
+</div>
+</div>
+</header>
+<!-- Environmental Impact Counter -->
+<section class="py-16 px-margin-desktop md:px-margin-desktop bg-gradient-to-r from-primary-fixed to-tertiary-fixed border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto text-center">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<div class="text-4xl md:text-5xl font-display-lg text-primary mb-2">2.5M+</div>
+<div class="font-headline-sm text-on-surface-variant text-lg">Barrels of Oil Saved</div>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-display-lg text-primary mb-2">15M+</div>
+<div class="font-headline-sm text-on-surface-variant text-lg">Trees Planted Equivalent</div>
+</div>
+<div>
+<div class="text-4xl md:text-5xl font-display-lg text-primary mb-2">500k</div>
+<div class="font-headline-sm text-on-surface-variant text-lg">Tons of Carbon Reduced</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Why Choose SolarPrecision?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our systems are designed to maximize your energy harvest and minimize your utility bills, all while contributing to a cleaner planet.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface rounded-xl p-8 shadow-[0_20px_40px_rgba(0,119,182,0.08)] hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/30 flex flex-col items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container mb-2">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Maximum Cost Savings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Lock in low energy rates and protect yourself from unpredictable utility price hikes. Our high-yield panels ensure an accelerated return on investment.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-xl p-8 shadow-[0_20px_40px_rgba(0,119,182,0.08)] hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/30 flex flex-col items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary mb-2">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Environmental Stewardship</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Significantly reduce your carbon footprint. By generating your own clean power, you are directly contributing to a sustainable future for the next generation.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-xl p-8 shadow-[0_20px_40px_rgba(0,119,182,0.08)] hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/30 flex flex-col items-start gap-4">
+<div class="w-16 h-16 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary mb-2">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background">Energy Independence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Take control of your power supply. Coupled with our advanced battery storage solutions, you can maintain power even during grid outages.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Industry-Leading Technology -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface" id="tech">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-secondary font-label-caps tracking-widest uppercase mb-4 block">Premium Components</span>
+<h2 class="font-headline-md text-headline-md text-on-background mb-6">Industry-Leading Technology</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We don't compromise on quality. SolarPrecision partners exclusively with top-tier manufacturers to provide you with the most efficient, durable, and aesthetically pleasing solar equipment available.</p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">solar_power</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-lg text-on-background mb-2">Monocrystalline High-Efficiency Panels</h4>
+<p class="font-body-md text-on-surface-variant">Our sleek, all-black panels deliver maximum power output per square foot, ensuring optimal performance even in low-light conditions.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">battery_charging_full</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-lg text-on-background mb-2">Intelligent Battery Storage</h4>
+<p class="font-body-md text-on-surface-variant">Store excess energy for use during peak rate times or grid outages. Our smart battery systems seamlessly integrate with your home network.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">router</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-lg text-on-background mb-2">Microinverter Technology</h4>
+<p class="font-body-md text-on-surface-variant">Advanced microinverters optimize each panel independently, guaranteeing maximum system yield even if some panels are shaded.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoKLA7R6J5xU2yYsyYomt_Bi1WP06m-uxN0YEDXsux7toJJAi5rzu_shU3n35cBmG4nYTlVIRA3B3HRPMv19DYg9tB7k8vpqSCIkhSELAe3GWnhbGjP46GfWzwQg0jb-LSNb16nmD8nZLTXeRUj83kvZNSnLZLrjAt4wQ_cfOnKljBRaIuOXCEfvK3CbfC7hGMrVGGsUUytNFhAXAbYhExSThD8uZ0KGR5oWZ_aqf15m9mr49r5kNE6g');"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Process -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant/30" id="process">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">A Seamless Transition to Solar</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Our transparent, streamlined 4-step process ensures a hassle-free experience from your first consultation to powering on your new system.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+<div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-outline-variant/30 z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-primary text-on-primary flex items-center justify-center font-display-lg text-4xl shadow-lg mb-6 border-4 border-surface-container-lowest">1</div>
+<h3 class="font-headline-sm text-xl text-on-background mb-3">Consultation</h3>
+<p class="font-body-md text-on-surface-variant">We assess your energy needs, review your utility bills, and conduct a preliminary satellite roof analysis to determine viability.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-display-lg text-4xl shadow-sm mb-6 border-4 border-surface-container-lowest">2</div>
+<h3 class="font-headline-sm text-xl text-on-background mb-3">Custom Design</h3>
+<p class="font-body-md text-on-surface-variant">Our engineers create a tailored system design maximizing your roof's solar potential and handling all necessary permits.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-display-lg text-4xl shadow-sm mb-6 border-4 border-surface-container-lowest">3</div>
+<h3 class="font-headline-sm text-xl text-on-background mb-3">Installation</h3>
+<p class="font-body-md text-on-surface-variant">Our certified installation crews expertly mount your panels and integrate the electrical systems, typically within 1-2 days.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-display-lg text-4xl shadow-lg mb-6 border-4 border-surface-container-lowest">4</div>
+<h3 class="font-headline-sm text-xl text-on-background mb-3">Activation</h3>
+<p class="font-body-md text-on-surface-variant">After final utility inspections, we power on your system. You immediately start generating clean energy and tracking it via our app.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Solar Savings Calculator -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface" id="calculator">
+<div class="max-w-container-max mx-auto">
+<div class="bg-primary-fixed/30 rounded-3xl p-8 md:p-12 shadow-xl border border-primary-fixed">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Calculate Your Solar Savings</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Discover how much you could save over 25 years by switching to solar. Enter your average monthly electric bill to see your potential returns.</p>
+<div class="space-y-6">
+<div>
+<label class="block font-headline-sm text-lg text-on-background mb-2">Average Monthly Electric Bill</label>
+<div class="flex items-center gap-4">
+<span class="text-2xl font-bold text-primary">$</span>
+<input class="w-full h-2 bg-outline-variant rounded-lg appearance-none cursor-pointer accent-primary" max="500" min="50" type="range" value="150"/>
+<span class="text-2xl font-bold text-primary w-16">150</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 pt-6 border-t border-outline-variant/30">
+<div>
+<span class="text-on-surface-variant font-body-md block mb-1">Estimated 25-Year Savings</span>
+<span class="text-3xl font-display-lg text-primary block">$45,000+</span>
+</div>
+<div>
+<span class="text-on-surface-variant font-body-md block mb-1">Payback Period</span>
+<span class="text-3xl font-display-lg text-secondary-container block">6-8 Years</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-md">
+<h3 class="font-headline-sm text-xl text-on-background mb-6">Get a Detailed Quote</h3>
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="First Name" type="text"/>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Last Name" type="text"/>
+</div>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Email Address" type="email"/>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Home Address (for roof analysis)" type="text"/>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-sm text-lg hover:bg-primary/90 transition-colors shadow-md mt-4" type="button">Generate My Report</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface-container-lowest" id="testimonials">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Empowering Homeowners</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Don't just take our word for it. Hear from customers who have transformed their homes with SolarPrecision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic text-on-background mb-6">"The installation was incredibly fast, and the panels look amazing on our roof. Our last energy bill was just the connection fee!"</p>
+</div>
+<div>
+<p class="font-headline-sm text-lg text-primary">Sarah Jenkins</p>
+<p class="text-sm text-on-surface-variant">Austin, TX</p>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic text-on-background mb-6">"SolarPrecision handled every single detail, from permits to HOA approval. The battery backup has already saved us during two grid outages."</p>
+</div>
+<div>
+<p class="font-headline-sm text-lg text-primary">Marcus &amp; Elena Rodriguez</p>
+<p class="text-sm text-on-surface-variant">Phoenix, AZ</p>
+</div>
+</div>
+<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex text-secondary-container mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic text-on-background mb-6">"Highly professional crew. The app they provided to track our generation and usage is addictive. Best investment we've made in our home."</p>
+</div>
+<div>
+<p class="font-headline-sm text-lg text-primary">David Chen</p>
+<p class="text-sm text-on-surface-variant">San Diego, CA</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile App Showcase -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<span class="text-secondary font-label-caps tracking-widest uppercase mb-4 block">Smart Monitoring</span>
+<h2 class="font-headline-md text-headline-md text-on-background mb-6">Power in the Palm of Your Hand</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Take control of your energy production and consumption from anywhere. Our intuitive mobile app gives you real-time insights and direct access to support.</p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-lg text-on-background mb-2">Real-time Tracking</h4>
+<p class="font-body-md text-on-surface-variant">Monitor your system's performance, current output, and historical generation data with easy-to-read graphs.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-lg text-on-background mb-2">Direct Support</h4>
+<p class="font-body-md text-on-surface-variant">Have a question? Connect instantly with our dedicated solar support team directly through the app.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center relative">
+<div class="absolute inset-0 bg-primary-fixed/20 rounded-full blur-3xl w-[300px] h-[300px] m-auto"></div>
+<!-- Mockup CSS Phone -->
+<div class="relative w-[300px] h-[600px] bg-surface-container-lowest border-[8px] border-surface-container-high rounded-[3rem] shadow-2xl overflow-hidden flex flex-col z-10">
+<!-- Notch -->
+<div class="absolute top-0 inset-x-0 h-6 bg-surface-container-high rounded-b-3xl w-40 mx-auto z-20"></div>
+<!-- Screen Content -->
+<div class="flex-1 bg-surface flex flex-col pt-12 p-6">
+<div class="flex justify-between items-center mb-8">
+<div class="font-headline-sm text-on-background">My Solar</div>
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</div>
+<div class="bg-primary text-on-primary rounded-2xl p-6 mb-6 shadow-lg">
+<div class="text-sm opacity-80 mb-1">Current Output</div>
+<div class="font-display-lg text-3xl mb-4">4.2 kW</div>
+<div class="w-full bg-on-primary/20 h-2 rounded-full overflow-hidden">
+<div class="bg-on-primary w-3/4 h-full rounded-full"></div>
+</div>
+</div>
+<div class="font-headline-sm text-on-background mb-4 text-lg">Today's Generation</div>
+<!-- Pseudo Graph -->
+<div class="flex-1 flex items-end justify-between gap-2 pb-4">
+<div class="w-1/6 bg-primary-fixed rounded-t-md h-[20%]"></div>
+<div class="w-1/6 bg-primary-fixed rounded-t-md h-[40%]"></div>
+<div class="w-1/6 bg-primary-fixed rounded-t-md h-[70%]"></div>
+<div class="w-1/6 bg-primary rounded-t-md h-[90%] shadow-[0_0_15px_rgba(0,93,144,0.3)]"></div>
+<div class="w-1/6 bg-primary-fixed rounded-t-md h-[60%]"></div>
+<div class="w-1/6 bg-primary-fixed rounded-t-md h-[30%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">The SolarPrecision Edge</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">See how our standards stack up against the rest of the solar industry.</p>
+</div>
+<div class="max-w-4xl mx-auto bg-surface border border-outline-variant/30 rounded-2xl overflow-hidden shadow-sm">
+<div class="grid grid-cols-3 bg-surface-container-low border-b border-outline-variant/30 font-headline-sm text-on-background">
+<div class="p-6">Feature</div>
+<div class="p-6 text-center text-on-surface-variant">Industry Average</div>
+<div class="p-6 text-center text-primary bg-primary-fixed/30 font-bold">SolarPrecision</div>
+</div>
+<div class="grid grid-cols-3 border-b border-outline-variant/10 items-center">
+<div class="p-6 font-body-lg text-on-background">Panel Efficiency</div>
+<div class="p-6 text-center text-on-surface-variant">15% - 18%</div>
+<div class="p-6 text-center text-primary bg-primary-fixed/10 font-semibold text-lg">22%+</div>
+</div>
+<div class="grid grid-cols-3 border-b border-outline-variant/10 items-center bg-surface-container-lowest/50">
+<div class="p-6 font-body-lg text-on-background">Installation Speed</div>
+<div class="p-6 text-center text-on-surface-variant">3-6 Weeks</div>
+<div class="p-6 text-center text-primary bg-primary-fixed/10 font-semibold text-lg">1-2 Weeks</div>
+</div>
+<div class="grid grid-cols-3 border-b border-outline-variant/10 items-center">
+<div class="p-6 font-body-lg text-on-background">Warranty Duration</div>
+<div class="p-6 text-center text-on-surface-variant">10-15 Years</div>
+<div class="p-6 text-center text-primary bg-primary-fixed/10 font-semibold text-lg">25 Years</div>
+</div>
+<div class="grid grid-cols-3 items-center bg-surface-container-lowest/50">
+<div class="p-6 font-body-lg text-on-background">Monitoring App</div>
+<div class="p-6 text-center text-on-surface-variant">Third-party</div>
+<div class="p-6 text-center text-primary bg-primary-fixed/10 font-semibold text-lg">Proprietary Native</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding px-margin-desktop md:px-margin-desktop bg-surface" id="faq">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-on-background mb-4">Frequently Asked Questions</h2>
+<p class="font-body-lg text-on-surface-variant">Everything you need to know about switching to solar.</p>
+</div>
+<div class="space-y-4">
+<div class="border border-outline-variant/30 rounded-xl bg-surface-container-lowest p-6">
+<h3 class="font-headline-sm text-lg text-primary mb-2">How long do solar panels last?</h3>
+<p class="font-body-md text-on-surface-variant">Our premium solar panels come with a 25-year performance warranty, but they are designed to last 30-40 years with minimal degradation in efficiency over time.</p>
+</div>
+<div class="border border-outline-variant/30 rounded-xl bg-surface-container-lowest p-6">
+<h3 class="font-headline-sm text-lg text-primary mb-2">What happens on cloudy days or at night?</h3>
+<p class="font-body-md text-on-surface-variant">Your panels will still generate some power on cloudy days. At night, you will draw from the grid or your battery storage system (if installed). Through net metering, excess power generated during the day can offset nighttime grid usage.</p>
+</div>
+<div class="border border-outline-variant/30 rounded-xl bg-surface-container-lowest p-6">
+<h3 class="font-headline-sm text-lg text-primary mb-2">Will solar panels damage my roof?</h3>
+<p class="font-body-md text-on-surface-variant">No. In fact, they often protect the portion of the roof they cover from weather and sun damage. Our installers use specialized mounting hardware that preserves roof integrity and includes a comprehensive leak warranty.</p>
+</div>
+<div class="border border-outline-variant/30 rounded-xl bg-surface-container-lowest p-6">
+<h3 class="font-headline-sm text-lg text-primary mb-2">Are there still tax incentives for going solar?</h3>
+<p class="font-body-md text-on-surface-variant">Yes! The federal solar tax credit (ITC) currently allows you to deduct 30% of the cost of installing a solar energy system from your federal taxes. Many states also offer additional local incentives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-margin-desktop md:px-margin-desktop bg-primary relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&amp;fit=crop&amp;q=80')] bg-cover bg-center"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="font-display-lg text-4xl md:text-5xl text-on-primary mb-6">Ready to Take Control of Your Energy?</h2>
+<p class="font-body-lg text-xl text-primary-fixed-dim mb-10 max-w-2xl mx-auto">Join thousands of homeowners who are saving money and the environment. Schedule your free, zero-pressure consultation today.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-lg font-headline-sm text-xl hover:bg-secondary-fixed-dim transition-colors shadow-lg active:scale-95">
+                Get Your Free Quote
+            </button>
+<button class="bg-transparent text-on-primary border-2 border-on-primary px-10 py-4 rounded-lg font-headline-sm text-xl hover:bg-on-primary/10 transition-colors active:scale-95">
+                Call Us: 1-800-SOLAR-01
+            </button>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="bg-on-primary-fixed dark:bg-surface-container-lowest text-secondary-container dark:text-secondary-fixed font-body-md text-body-md w-full py-section-padding border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-surface dark:text-primary">SolarPrecision</span>
+<p class="text-surface-variant dark:text-on-surface-variant text-sm mt-2">© 2024 SolarPrecision Energy Systems. All rights reserved.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start mt-8 md:mt-0">
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-container hover:translate-x-1 transition-transform duration-300 opacity-90 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-container hover:translate-x-1 transition-transform duration-300 opacity-90 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-container hover:translate-x-1 transition-transform duration-300 opacity-90 hover:opacity-100 transition-opacity" href="#">Service Areas</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-container hover:translate-x-1 transition-transform duration-300 opacity-90 hover:opacity-100 transition-opacity" href="#">Careers</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-secondary-container hover:translate-x-1 transition-transform duration-300 opacity-90 hover:opacity-100 transition-opacity" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+</body></html>
