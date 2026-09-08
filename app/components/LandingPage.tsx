@@ -35,7 +35,7 @@ export default function LandingPage() {
 
       <header className="relative flex items-center justify-center p-0 max-h-screen overflow-y-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="h-full w-full bg-center bg-white bg-[url('/images/homeSolar.jfif')] bg-no-repeat bg-cover lg:bg-none" />
+          <div className="h-full w-full bg-center bg-white bg-[url('/images/homeSolar.jpg')] bg-no-repeat bg-cover lg:bg-none" />
           <div className="absolute inset-0 bg-white/30 backdrop-blur-xs" />
           <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
         </div>
@@ -84,13 +84,13 @@ export default function LandingPage() {
           <div
             className="relative hidden h-full lg:block bg-no-repeat bg-cover bg-center overflow-hidden"
             // style={{
-            //   backgroundImage: "url('/images/hero5.jfif')",
+            //   backgroundImage: "url('/images/hero5.jpg')",
             // }}
           >
             <div className="absolute left-0 top-0 h-full w-2/5 bg-linear-to-r from-black/60 to-black/0" />
             <Image
               alt="solar panels"
-              src="/images/hero5.jfif"
+              src="/images/hero5.jpg"
               className="w-full h-full object-cover starting:scale-120 scale-100 delay-1000 transition-all duration-800"
               width={400}
               height={400}
@@ -286,15 +286,9 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                // style={{
-                //   backgroundImage:
-                //     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBoKLA7R6J5xU2yYsyYomt_Bi1WP06m-uxN0YEDXsux7toJJAi5rzu_shU3n35cBmG4nYTlVIRA3B3HRPMv19DYg9tB7k8vpqSCIkhSELAe3GWnhbGjP46GfWzwQg0jb-LSNb16nmD8nZLTXeRUj83kvZNSnLZLrjAt4wQ_cfOnKljBRaIuOXCEfvK3CbfC7hGMrVGGsUUytNFhAXAbYhExSThD8uZ0KGR5oWZ_aqf15m9mr49r5kNE6g')",
-                // }}
-              >
+              <div className="absolute inset-0 bg-cover bg-center">
                 <Image
-                  alt="Solar installation company"
+                  alt="Engineer with solar panel"
                   width={500}
                   height={700}
                   src="/images/engineer1.jpg"
@@ -400,7 +394,7 @@ export default function LandingPage() {
             >
               <Image
                 className="h-full w-full object-cover"
-                src="/images/homeSolar.jfif"
+                src="/images/homeSolar.jpg"
                 alt="Residential solar roof"
                 width={650}
                 height={500}
@@ -516,7 +510,7 @@ export default function LandingPage() {
             >
               <Image
                 className="h-full w-full object-cover"
-                src="/images/industrial2.jfif"
+                src="/images/industrial2.jpg"
                 alt="Commercial solar array"
                 width={650}
                 height={500}
